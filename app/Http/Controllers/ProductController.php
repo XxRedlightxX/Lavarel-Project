@@ -11,9 +11,11 @@ class ProductController extends Controller
 
         
         
-        return view("produits.index", [
+       /* return view("produits.index", [
             'products' =>  Produit::all()
-        ]);
+        ]);*/
+
+        return response()->json(Produit::all());
     }
 
     public function create() {
